@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>INCEPTION</title>
+        <link rel="icon" href="image/download.jfif">
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("image/download.jfif");
+            z-index: 2;
+        }
+        span {
+            color: rgb(255, 58, 58);
+        }
+        h1 {
+            color: white;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+        .background {
+            background-color: rgba(0, 0, 0, 0.781);
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        video {
+            width: 100vw;
+            max-width: 700px;
+        }
+    </style>
+    <body>
+        <div class="background"></div>
+        <h1>مترجم لعيون زيد <span>inception</span> فلم</h1>
+        <video src="videos/WIN_20260203_19_33_13_Pro.mp4" id="films" controls>
+        </video>
+    </body>
+    <script>
+        let video = document.getElementById("films")
+        video.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") {
+                video.currentTime += 10
+            }
+            if (event.key === "ArrowLeft") {
+                video.currentTime -= 10
+            }
+        })
+    </script>
+</html>
